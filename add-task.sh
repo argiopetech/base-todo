@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo helle world
+echo $* >> ~/.todo/tasks.txt
