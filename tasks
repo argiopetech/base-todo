@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]; then
+    echo "Usage: $0 COMMAND FLAGS..."
+    exit
+fi
+
+case "$1" in
+    "add"|"list"|"remove")
+        ./$1-task.sh ${*#$1}
+        ;;
+    *)
+        echo -e "Available Commands:\n\tadd\n\tlist\n\tremove"
+        exit
+        ;;
+esac
